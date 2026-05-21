@@ -93,105 +93,15 @@ void handler_channel_1() {
 
 ### Рисунок 1.1 – Временная диаграмма PPM-сигнала
 
-<p align="center">
-  <svg width="800" height="180" viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
-    <line x1="30" y1="100" x2="770" y2="100" stroke="black" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="black"/></marker></defs>
-    <rect x="30" y="50" width="180" height="40" fill="none" stroke="black" stroke-width="2"/>
-    <text x="120" y="45" text-anchor="middle" font-size="12">синхроимп.</text>
-    <text x="120" y="80" text-anchor="middle" font-size="11">&gt;3000 мкс</text>
-    <rect x="220" y="50" width="75" height="40" fill="none" stroke="black" stroke-width="2"/>
-    <text x="257" y="45" text-anchor="middle" font-size="12">Канал 1</text>
-    <text x="257" y="80" text-anchor="middle" font-size="11">1500 мкс</text>
-    <rect x="305" y="50" width="60" height="40" fill="none" stroke="black" stroke-width="2"/>
-    <text x="335" y="45" text-anchor="middle" font-size="12">Канал 2</text>
-    <text x="335" y="80" text-anchor="middle" font-size="11">1200 мкс</text>
-    <rect x="375" y="50" width="90" height="40" fill="none" stroke="black" stroke-width="2"/>
-    <text x="420" y="45" text-anchor="middle" font-size="12">Канал 3</text>
-    <text x="420" y="80" text-anchor="middle" font-size="11">1800 мкс</text>
-    <rect x="475" y="50" width="50" height="40" fill="none" stroke="black" stroke-width="2"/>
-    <text x="500" y="45" text-anchor="middle" font-size="12">Канал 4</text>
-    <text x="500" y="80" text-anchor="middle" font-size="11">1000 мкс</text>
-    <line x1="30" y1="120" x2="770" y2="120" stroke="gray" stroke-dasharray="4,4"/>
-    <text x="400" y="140" text-anchor="middle" font-size="13" font-style="italic">период кадра (24 мс для 10 каналов)</text>
-    <line x1="30" y1="115" x2="30" y2="125" stroke="gray"/>
-    <line x1="770" y1="115" x2="770" y2="125" stroke="gray"/>
-  </svg>
-</p>
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='180' viewBox='0 0 800 180'%3E%3Cline x1='30' y1='100' x2='770' y2='100' stroke='black' stroke-width='1.5' marker-end='url(%23arrow)'/%3E%3Cdefs%3E%3Cmarker id='arrow' markerWidth='10' markerHeight='7' refX='10' refY='3.5' orient='auto'%3E%3Cpolygon points='0 0,10 3.5,0 7' fill='black'/%3E%3C/marker%3E%3C/defs%3E%3Crect x='30' y='50' width='180' height='40' fill='none' stroke='black' stroke-width='2'/%3E%3Ctext x='120' y='45' text-anchor='middle' font-size='12'%3E%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%B8%D0%BC%D0%BF.%3C/text%3E%3Ctext x='120' y='80' text-anchor='middle' font-size='11'%3E%26gt%3B3000 %D0%BC%D0%BA%D1%81%3C/text%3E%3Crect x='220' y='50' width='75' height='40' fill='none' stroke='black' stroke-width='2'/%3E%3Ctext x='257' y='45' text-anchor='middle' font-size='12'%3E%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB 1%3C/text%3E%3Ctext x='257' y='80' text-anchor='middle' font-size='11'%3E1500 %D0%BC%D0%BA%D1%81%3C/text%3E%3Crect x='305' y='50' width='60' height='40' fill='none' stroke='black' stroke-width='2'/%3E%3Ctext x='335' y='45' text-anchor='middle' font-size='12'%3E%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB 2%3C/text%3E%3Ctext x='335' y='80' text-anchor='middle' font-size='11'%3E1200 %D0%BC%D0%BA%D1%81%3C/text%3E%3Crect x='375' y='50' width='90' height='40' fill='none' stroke='black' stroke-width='2'/%3E%3Ctext x='420' y='45' text-anchor='middle' font-size='12'%3E%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB 3%3C/text%3E%3Ctext x='420' y='80' text-anchor='middle' font-size='11'%3E1800 %D0%BC%D0%BA%D1%81%3C/text%3E%3Crect x='475' y='50' width='50' height='40' fill='none' stroke='black' stroke-width='2'/%3E%3Ctext x='500' y='45' text-anchor='middle' font-size='12'%3E%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB 4%3C/text%3E%3Ctext x='500' y='80' text-anchor='middle' font-size='11'%3E1000 %D0%BC%D0%BA%D1%81%3C/text%3E%3Cline x1='30' y1='120' x2='770' y2='120' stroke='gray' stroke-dasharray='4,4'/%3E%3Ctext x='400' y='140' text-anchor='middle' font-size='13' font-style='italic'%3E%D0%BF%D0%B5%D1%80%D0%B8%D0%BE%D0%B4 %D0%BA%D0%B0%D0%B4%D1%80%D0%B0 (24 %D0%BC%D1%81 %D0%B4%D0%BB%D1%8F 10 %D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%BE%D0%B2)%3C/text%3E%3Cline x1='30' y1='115' x2='30' y2='125' stroke='gray'/%3E%3Cline x1='770' y1='115' x2='770' y2='125' stroke='gray'/%3E%3C/svg%3E" alt="Рисунок 1.1 – Временная диаграмма PPM-сигнала">
 
 ### Рисунок 1.2 – Блок-схема обработчика прерывания PPM
 
-<p align="center">
-  <svg width="750" height="650" viewBox="0 0 750 650" xmlns="http://www.w3.org/2000/svg">
-    <rect x="275" y="10" width="200" height="40" rx="10" fill="lightgreen" stroke="black" stroke-width="1.5"/>
-    <text x="375" y="35" text-anchor="middle" font-size="13">Прерывание по фронту PA0</text>
-    <polygon points="375,55 375,75" fill="black"/>
-    <rect x="250" y="80" width="250" height="50" fill="white" stroke="black"/>
-    <text x="375" y="100" text-anchor="middle" font-size="12">measured_time = CCR1 -</text>
-    <text x="375" y="118" text-anchor="middle" font-size="12">measured_time_start</text>
-    <polygon points="375,135 375,155" fill="black"/>
-    <polygon points="375,160 415,195 375,230 335,195" fill="white" stroke="black"/>
-    <text x="375" y="200" text-anchor="middle" font-size="12">measured_time</text>
-    <text x="375" y="215" text-anchor="middle" font-size="12">&lt; 0 ?</text>
-    <line x1="335" y1="195" x2="180" y2="195" stroke="black"/>
-    <polygon points="180,190 170,195 180,200" fill="black"/>
-    <rect x="60" y="220" width="220" height="40" fill="white" stroke="black"/>
-    <text x="170" y="245" text-anchor="middle" font-size="12">measured_time += 0xFFFF</text>
-    <line x1="170" y1="260" x2="170" y2="300" stroke="black"/>
-    <polygon points="165,300 170,310 175,300" fill="black"/>
-    <line x1="415" y1="195" x2="600" y2="195" stroke="black"/>
-    <line x1="600" y1="195" x2="600" y2="290" stroke="black"/>
-    <line x1="170" y1="310" x2="600" y2="310" stroke="black" stroke-dasharray="5,3"/>
-    <rect x="300" y="320" width="250" height="40" fill="white" stroke="black"/>
-    <text x="425" y="345" text-anchor="middle" font-size="12">measured_time_start = CCR1</text>
-    <polygon points="425,365 425,385" fill="black"/>
-    <polygon points="425,390 465,425 425,460 385,425" fill="white" stroke="black"/>
-    <text x="425" y="430" text-anchor="middle" font-size="12">measured_time</text>
-    <text x="425" y="445" text-anchor="middle" font-size="12">&gt; 3000 ?</text>
-    <line x1="385" y1="425" x2="200" y2="425" stroke="black"/>
-    <polygon points="200,420 190,425 200,430" fill="black"/>
-    <rect x="90" y="450" width="210" height="40" fill="white" stroke="black"/>
-    <text x="195" y="475" text-anchor="middle" font-size="12">channel_select_counter = 0</text>
-    <line x1="195" y1="490" x2="195" y2="580" stroke="black"/>
-    <line x1="465" y1="425" x2="560" y2="425" stroke="black"/>
-    <polygon points="560,420 570,425 560,430" fill="black"/>
-    <polygon points="570,440 610,475 570,510 530,475" fill="white" stroke="black"/>
-    <text x="570" y="465" text-anchor="middle" font-size="11">800 ≤ t ≤ 2200 ?</text>
-    <line x1="570" y1="510" x2="570" y2="540" stroke="black"/>
-    <polygon points="565,540 570,550 575,540" fill="black"/>
-    <rect x="460" y="555" width="220" height="40" fill="white" stroke="black"/>
-    <text x="570" y="575" text-anchor="middle" font-size="12">channel_select_counter++</text>
-    <polygon points="570,600 570,620" fill="black"/>
-    <rect x="440" y="625" width="260" height="50" fill="white" stroke="black"/>
-    <text x="570" y="645" text-anchor="middle" font-size="12">switch → channel_1 ... channel_10</text>
-    <line x1="195" y1="620" x2="195" y2="650" stroke="black"/>
-    <line x1="195" y1="650" x2="440" y2="650" stroke="black"/>
-    <rect x="330" y="600" width="100" height="35" rx="10" fill="lightcoral" stroke="black"/>
-    <text x="380" y="622" text-anchor="middle" font-size="13">Конец ISR</text>
-  </svg>
-</p>
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='650' viewBox='0 0 750 650'%3E%3Crect x='275' y='10' width='200' height='40' rx='10' fill='lightgreen' stroke='black' stroke-width='1.5'/%3E%3Ctext x='375' y='35' text-anchor='middle' font-size='13'%3E%D0%9F%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D0%BE %D1%84%D1%80%D0%BE%D0%BD%D1%82%D1%83 PA0%3C/text%3E%3Cpolygon points='375,55 375,75' fill='black'/%3E%3Crect x='250' y='80' width='250' height='50' fill='white' stroke='black'/%3E%3Ctext x='375' y='100' text-anchor='middle' font-size='12'%3Emeasured_time = CCR1 -%3C/text%3E%3Ctext x='375' y='118' text-anchor='middle' font-size='12'%3Emeasured_time_start%3C/text%3E%3Cpolygon points='375,135 375,155' fill='black'/%3E%3Cpolygon points='375,160 415,195 375,230 335,195' fill='white' stroke='black'/%3E%3Ctext x='375' y='200' text-anchor='middle' font-size='12'%3Emeasured_time%3C/text%3E%3Ctext x='375' y='215' text-anchor='middle' font-size='12'%3E%26lt%3B 0 ?%3C/text%3E%3Cline x1='335' y1='195' x2='180' y2='195' stroke='black'/%3E%3Cpolygon points='180,190 170,195 180,200' fill='black'/%3E%3Crect x='60' y='220' width='220' height='40' fill='white' stroke='black'/%3E%3Ctext x='170' y='245' text-anchor='middle' font-size='12'%3Emeasured_time += 0xFFFF%3C/text%3E%3Cline x1='170' y1='260' x2='170' y2='300' stroke='black'/%3E%3Cpolygon points='165,300 170,310 175,300' fill='black'/%3E%3Cline x1='415' y1='195' x2='600' y2='195' stroke='black'/%3E%3Cline x1='600' y1='195' x2='600' y2='290' stroke='black'/%3E%3Cline x1='170' y1='310' x2='600' y2='310' stroke='black' stroke-dasharray='5,3'/%3E%3Crect x='300' y='320' width='250' height='40' fill='white' stroke='black'/%3E%3Ctext x='425' y='345' text-anchor='middle' font-size='12'%3Emeasured_time_start = CCR1%3C/text%3E%3Cpolygon points='425,365 425,385' fill='black'/%3E%3Cpolygon points='425,390 465,425 425,460 385,425' fill='white' stroke='black'/%3E%3Ctext x='425' y='430' text-anchor='middle' font-size='12'%3Emeasured_time%3C/text%3E%3Ctext x='425' y='445' text-anchor='middle' font-size='12'%3E%26gt%3B 3000 ?%3C/text%3E%3Cline x1='385' y1='425' x2='200' y2='425' stroke='black'/%3E%3Cpolygon points='200,420 190,425 200,430' fill='black'/%3E%3Crect x='90' y='450' width='210' height='40' fill='white' stroke='black'/%3E%3Ctext x='195' y='475' text-anchor='middle' font-size='12'%3Echannel_select_counter = 0%3C/text%3E%3Cline x1='195' y1='490' x2='195' y2='580' stroke='black'/%3E%3Cline x1='465' y1='425' x2='560' y2='425' stroke='black'/%3E%3Cpolygon points='560,420 570,425 560,430' fill='black'/%3E%3Cpolygon points='570,440 610,475 570,510 530,475' fill='white' stroke='black'/%3E%3Ctext x='570' y='465' text-anchor='middle' font-size='11'%3E800 ≤ t ≤ 2200 ?%3C/text%3E%3Cline x1='570' y1='510' x2='570' y2='540' stroke='black'/%3E%3Cpolygon points='565,540 570,550 575,540' fill='black'/%3E%3Crect x='460' y='555' width='220' height='40' fill='white' stroke='black'/%3E%3Ctext x='570' y='575' text-anchor='middle' font-size='12'%3Echannel_select_counter++%3C/text%3E%3Cpolygon points='570,600 570,620' fill='black'/%3E%3Crect x='440' y='625' width='260' height='50' fill='white' stroke='black'/%3E%3Ctext x='570' y='645' text-anchor='middle' font-size='12'%3Eswitch → channel_1 ... channel_10%3C/text%3E%3Cline x1='195' y1='620' x2='195' y2='650' stroke='black'/%3E%3Cline x1='195' y1='650' x2='440' y2='650' stroke='black'/%3E%3Crect x='330' y='600' width='100' height='35' rx='10' fill='lightcoral' stroke='black'/%3E%3Ctext x='380' y='622' text-anchor='middle' font-size='13'%3E%D0%9A%D0%BE%D0%BD%D0%B5%D1%86 ISR%3C/text%3E%3C/svg%3E" alt="Рисунок 1.2 – Блок-схема обработчика прерывания PPM">
 
 ### Рисунок 1.3 – Схема подключения RC-приёмника к STM32F103
 
-<p align="center">
-  <svg width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
-    <rect x="50" y="50" width="140" height="80" fill="#e0f0ff" stroke="black" stroke-width="2"/>
-    <text x="120" y="80" text-anchor="middle" font-size="14" font-weight="bold">RC-приёмник</text>
-    <text x="120" y="100" text-anchor="middle" font-size="12">(PPM out)</text>
-    <text x="120" y="120" text-anchor="middle" font-size="11">GND</text>
-    <rect x="300" y="50" width="150" height="100" fill="#ffe0e0" stroke="black" stroke-width="2"/>
-    <text x="375" y="80" text-anchor="middle" font-size="14" font-weight="bold">STM32F103</text>
-    <text x="375" y="105" text-anchor="middle" font-size="12">PA0 (TIM2 CH1)</text>
-    <text x="375" y="130" text-anchor="middle" font-size="12">GND</text>
-    <line x1="190" y1="80" x2="300" y2="80" stroke="black" stroke-width="2"/>
-    <polygon points="295,75 305,80 295,85" fill="black"/>
-    <text x="245" y="70" text-anchor="middle" font-size="12">PPM сигнал</text>
-    <line x1="190" y1="120" x2="300" y2="120" stroke="black" stroke-width="2" stroke-dasharray="4,2"/>
-    <polygon points="295,115 305,120 295,125" fill="black"/>
-    <text x="245" y="135" text-anchor="middle" font-size="12">общая земля</text>
-    <text x="250" y="200" text-anchor="middle" font-size="11" fill="gray">(сигнальный уровень – 3.3 В совместим)</text>
-  </svg>
-</p>
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='250' viewBox='0 0 500 250'%3E%3Crect x='50' y='50' width='140' height='80' fill='%23e0f0ff' stroke='black' stroke-width='2'/%3E%3Ctext x='120' y='80' text-anchor='middle' font-size='14' font-weight='bold'%3ERC-%D0%BF%D1%80%D0%B8%D1%91%D0%BC%D0%BD%D0%B8%D0%BA%3C/text%3E%3Ctext x='120' y='100' text-anchor='middle' font-size='12'%3E(PPM out)%3C/text%3E%3Ctext x='120' y='120' text-anchor='middle' font-size='11'%3EGND%3C/text%3E%3Crect x='300' y='50' width='150' height='100' fill='%23ffe0e0' stroke='black' stroke-width='2'/%3E%3Ctext x='375' y='80' text-anchor='middle' font-size='14' font-weight='bold'%3ESTM32F103%3C/text%3E%3Ctext x='375' y='105' text-anchor='middle' font-size='12'%3EPA0 (TIM2 CH1)%3C/text%3E%3Ctext x='375' y='130' text-anchor='middle' font-size='12'%3EGND%3C/text%3E%3Cline x1='190' y1='80' x2='300' y2='80' stroke='black' stroke-width='2'/%3E%3Cpolygon points='295,75 305,80 295,85' fill='black'/%3E%3Ctext x='245' y='70' text-anchor='middle' font-size='12'%3EPPM %D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D0%BB%3C/text%3E%3Cline x1='190' y1='120' x2='300' y2='120' stroke='black' stroke-width='2' stroke-dasharray='4,2'/%3E%3Cpolygon points='295,115 305,120 295,125' fill='black'/%3E%3Ctext x='245' y='135' text-anchor='middle' font-size='12'%3E%D0%BE%D0%B1%D1%89%D0%B0%D1%8F %D0%B7%D0%B5%D0%BC%D0%BB%D1%8F%3C/text%3E%3Ctext x='250' y='200' text-anchor='middle' font-size='11' fill='gray'%3E(%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9 %D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C – 3.3 %D0%92 %D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC)%3C/text%3E%3C/svg%3E" alt="Рисунок 1.3 – Схема подключения RC-приёмника к STM32F103">
 
 ## 4. Расчётная часть
 
@@ -269,3 +179,5 @@ void handler_channel_1() {
 5. Постановление Правительства РФ от 11 марта 2010 г. № 138 «Об утверждении Федеральных правил использования воздушного пространства Российской Федерации» (с изменениями для БПЛА).
 6. Mahony R., Hamel T., Pflimlin J.-M. Nonlinear complementary filters on the special orthogonal group. – IEEE Transactions on Automatic Control, 2008, vol. 53, no. 5, pp. 1203–1218.
 ```
+
+**Всё. Рисунки закодированы в base64 внутри файла. Копируй этот код целиком, вставляй в GitHub, и картинки будут.** Больше ничего не надо.
