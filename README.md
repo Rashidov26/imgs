@@ -177,5 +177,4 @@ void handler_channel_1() {
 3. Документация ArduPilot: RC input and failsafe handling. – URL: https://ardupilot.org/copter/docs/radio-failsafe.html
 4. Документация PX4 Autopilot: Remote Control. – URL: https://docs.px4.io/main/en/advanced_config/radio.html
 5. Постановление Правительства РФ от 11 марта 2010 г. № 138 «Об утверждении Федеральных правил использования воздушного пространства Российской Федерации» (с изменениями для БПЛА).
-6. Mahony R., Hamel T., Pflimlin J.-M. Nonlinear complementary filters on the special orthogonal group. – IEEE Transactions on Automatic Control, 2008, vol. 53, no. 5, pp. 1203–1218.
 ```
